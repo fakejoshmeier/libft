@@ -1,4 +1,6 @@
-void	*memcpy(void *dest, const void *src. size_t n)
+#include <libft.h>
+
+void	*memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	count;
 	char	*mid;
