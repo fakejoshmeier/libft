@@ -2,13 +2,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	count;
+	size_t	c;
 	char	*z;
 
 	if (!n)
 		return ;
-	count = 0;
+	c = 0;
 	z = s;
-	while (count < n)
-		*(count + z++) = 0;
+	while (c < n)
+		(z[c++]) = 0;
 }

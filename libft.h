@@ -31,7 +31,16 @@ int		ft_isprint(int c);
 int		ft_isascii(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+void	ft_strclr(char *s);
+void	ftstrdel(char **as);
+int		ft_strequ(char const *s1, char const *s2);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strnew(size_t size);
+
 void	ft_putchar(char c);
-void	ft_putstr(char *str);
+voit	ft_putstr(char *str);
 
 #endif
