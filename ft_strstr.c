@@ -6,11 +6,11 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 13:20:49 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/22 22:31:42 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/21 21:15:54 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strstr(const char *big, const char *little)
 {

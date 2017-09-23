@@ -6,7 +6,7 @@
 #    By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/18 21:04:05 by jmeier            #+#    #+#              #
-#    Updated: 2017/09/22 22:32:44 by jmeier           ###   ########.fr        #
+#    Updated: 2017/09/19 15:32:33 by jmeier           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 $(OBJ):
-	gcc -c -Wall -Werror -Wextra $(SRC) $(HEADER)
+	gcc -c -Wall -Werror -Wextra $(SRC) $(HEADER) -I ./
 
 clean:
 		rm -f *.o libft.h.gch

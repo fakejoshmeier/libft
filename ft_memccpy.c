@@ -6,11 +6,11 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 14:00:24 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/22 22:21:54 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/21 21:03:41 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

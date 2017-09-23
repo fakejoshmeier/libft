@@ -6,11 +6,11 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 14:01:45 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/22 22:22:08 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/21 21:04:26 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
