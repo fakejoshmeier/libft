@@ -6,11 +6,11 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 13:58:21 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/20 13:08:10 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/22 22:21:20 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_isprint(int c)
 {
