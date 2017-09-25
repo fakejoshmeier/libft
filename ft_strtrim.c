@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 11:08:59 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/24 22:27:36 by jmeier           ###   ########.fr       */
+/*   Created: 2017/09/24 23:31:34 by jmeier            #+#    #+#             */
+/*   Updated: 2017/09/24 23:33:49 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+char	*ft_strtrim(char const *s)
 {
-	int		sign;
-	int		i;
-	long	res;
+	size_t	a;
+	size_t	b;
+	size_t	c;
+	size_t	d;
+	char	*str;
 
-	res = 0;
-	i = 0;
-	sign = 1;
-	while ((str[i] == '\n' || str[i] == '\t' || str[i] == '\v') ||
-			(str[i] == ' ' || str[i] == '\f' || str[i] == '\r'))
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	while (str[i] && (str[i] >= '0') && (str[i] <= '9'))
-		res = res * 10 + (str[i++] - '0');
-	return (res * sign);
+	a = 0;
+	while (s[a++] && !c)
+		if (s[a] != ' ' || s[a] != '\n' || s[a] != '\t')
+			c = a;
+	b = ft_strlen(s);
+	while (s[b--] && !d)
+		if (s[b] != ' ' || s[b] != '\n' || s[b] != '\t')
+			d = b;
+	str = ft_strnew((ft_strlen(s) - c) - (ft_strlen(s) - d));
+	a = 0;
+	while (c < d)
+		str[a++] = s[c++];
+	return (str);
 }

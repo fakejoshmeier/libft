@@ -6,11 +6,11 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 11:41:09 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/18 14:57:19 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/24 22:26:12 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

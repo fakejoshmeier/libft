@@ -6,11 +6,11 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 16:06:58 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/19 20:26:39 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/24 22:55:38 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_putstr(char *s)
 {

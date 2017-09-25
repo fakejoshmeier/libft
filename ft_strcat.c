@@ -6,11 +6,11 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 14:24:42 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/21 21:07:55 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/24 22:56:37 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strcat(char *dst, const char *src)
 {

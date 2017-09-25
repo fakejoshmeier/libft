@@ -6,11 +6,11 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 16:11:23 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/18 16:11:51 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/24 23:22:19 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strnew(size_t size)
 {
