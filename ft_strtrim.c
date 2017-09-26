@@ -6,31 +6,52 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 23:31:34 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/24 23:33:49 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/25 16:01:26 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static size_t	blank_space_b(char *s)
+{
+	size_t a;
+
+	a = 0;
+	while ((s[a]) && (s[a] == ' ' || s[a] == '\n' || s[a] == '\t'))
+		a++;
+	return (a);
+}
+
+static size_t	blank_space_e(char *s)
+{
+	size_t a;
+
+	a = ft_strlen(s) - 1;
+	while (s[a] == ' ' || s[a] == '\n' || s[a] == '\t')
+		a--;
+	return (a);
+}
+
+char			*ft_strtrim(char const *s)
 {
 	size_t	a;
 	size_t	b;
-	size_t	c;
-	size_t	d;
+	size_t	i;
 	char	*str;
 
-	a = 0;
-	while (s[a++] && !c)
-		if (s[a] != ' ' || s[a] != '\n' || s[a] != '\t')
-			c = a;
-	b = ft_strlen(s);
-	while (s[b--] && !d)
-		if (s[b] != ' ' || s[b] != '\n' || s[b] != '\t')
-			d = b;
-	str = ft_strnew((ft_strlen(s) - c) - (ft_strlen(s) - d));
-	a = 0;
-	while (c < d)
-		str[a++] = s[c++];
+	if (!s)
+		return (NULL);
+	a = blank_space_b((char *)s);
+	b = blank_space_e((char *)s);
+	if (a == 0 && b == ft_strlen(s) - 1)
+		return ((char *)s);
+	if (a == ft_strlen(s) || b == 0)
+		return (ft_strnew(0));
+	str = ft_strnew((b - a) + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (a <= b)
+		str[i++] = s[a++];
 	return (str);
 }
