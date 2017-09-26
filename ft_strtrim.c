@@ -43,8 +43,6 @@ char			*ft_strtrim(char const *s)
 		return (NULL);
 	a = blank_space_b((char *)s);
 	b = blank_space_e((char *)s);
-	if (a == 0 && b == ft_strlen(s) - 1)
-		return ((char *)s);
 	if (a == ft_strlen(s) || b == 0)
 		return (ft_strnew(0));
 	str = ft_strnew((b - a) + 1);
