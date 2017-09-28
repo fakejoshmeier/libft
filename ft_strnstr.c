@@ -6,34 +6,34 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 11:27:32 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/24 23:22:29 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/27 17:51:02 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *lil, size_t len)
 {
 	int		marker;
 	int		i;
 	int		j;
 	int		k;
 
-	if (!ft_strlen(little))
+	if (!ft_strlen(lil))
 		return ((char *)big);
 	i = -1;
 	marker = 0;
 	while (*(big + ++i) && !marker && i < (int)len)
 	{
-		if (*(big + i) == *(little + 0))
+		if (*(big + i) == *(lil + 0))
 		{
 			j = 0;
 			k = i;
 			marker = 1;
-			while (*(little + j) && *(big + k) && k < (int)len && j < (int)len)
-				if (*(little + j++) != *(big + k++))
+			while (*(lil + j) && *(big + k) && k < (int)len && j < (int)len)
+				if (*(lil + j++) != *(big + k++))
 					marker = 0;
-			if (marker && !*(little + j))
+			if (marker && !*(lil + j))
 				return ((char *)big + i);
 		}
 	}
