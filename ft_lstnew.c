@@ -6,7 +6,7 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/26 11:20:51 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/26 12:35:05 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/09/30 13:34:18 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		return (NULL);
 	if (!content)
 	{
-		content = NULL;
-		content_size = 0;
+		tmp->content = NULL;
+		tmp->content_size = 0;
 	}
 	else
 	{
