@@ -6,7 +6,7 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 23:31:34 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/26 11:13:02 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/10/05 16:33:08 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	blank_space_b(char *s)
 	size_t a;
 
 	a = 0;
-	while ((s[a]) && (s[a] == ' ' || s[a] == '\n' || s[a] == '\t'))
+	while ((s[a]) && ft_isspace(s[a]))
 		a++;
 	return (a);
 }
@@ -27,7 +27,7 @@ static size_t	blank_space_e(char *s)
 	size_t a;
 
 	a = ft_strlen(s) - 1;
-	while (s[a] == ' ' || s[a] == '\n' || s[a] == '\t')
+	while (ft_isspace(s[a]))
 		a--;
 	return (a);
 }

@@ -6,7 +6,7 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 11:34:56 by jmeier            #+#    #+#             */
-/*   Updated: 2017/09/27 17:50:58 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/10/05 16:30:30 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
+int					ft_isspace(char c);
 int					ft_isascii(int c);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int n, int base);
