@@ -6,7 +6,7 @@
 #    By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/18 21:04:05 by jmeier            #+#    #+#              #
-#    Updated: 2017/09/27 18:09:24 by jmeier           ###   ########.fr        #
+#    Updated: 2017/10/05 16:41:38 by jmeier           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_strstr.c \
 		ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c \
 		ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c \
 		ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strsub.c \
-		ft_strtrim.c ft_tolower.c ft_toupper.c
+		ft_strtrim.c ft_tolower.c ft_toupper.c ft_isspace.c
 HEADER = libft.h
 OBJ = $(SRC:.c=.o)
 
