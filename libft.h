@@ -6,7 +6,7 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 11:34:56 by jmeier            #+#    #+#             */
-/*   Updated: 2017/10/29 19:49:21 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/10/29 19:55:25 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct		s_block
 	struct s_block	*next;
 }					t_block;
 
-		typedef struct		s_list
+typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
