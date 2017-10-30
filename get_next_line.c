@@ -6,15 +6,15 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 09:34:13 by jmeier            #+#    #+#             */
-/*   Updated: 2017/10/29 19:45:38 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/10/29 20:25:09 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		parse(t_block **block, char **line)
+static int		parse(t_block **block, char **line)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while ((*block)->str[i] && (*block)->str[i] != '\n')
@@ -37,7 +37,7 @@ int		parse(t_block **block, char **line)
 	return (1);
 }
 
-t_block	*cycle_fd(t_block **train, const int fd)
+static t_block	*cycle_fd(t_block **train, const int fd)
 {
 	t_block			*tmp;
 
@@ -55,7 +55,7 @@ t_block	*cycle_fd(t_block **train, const int fd)
 	return (tmp);
 }
 
-int		get_next_line(const int fd, char **line)
+int				get_next_line(const int fd, char **line)
 {
 	static t_block	*train;
 	t_block			*tmp;
