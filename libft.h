@@ -6,7 +6,7 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 11:34:56 by jmeier            #+#    #+#             */
-/*   Updated: 2017/10/13 23:28:48 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/10/29 19:49:21 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,28 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# define BUFF_SIZE 4096
+# define ASSERT(a) if (!(a)) return (-1);
+# define C_ASSERT(a) if (!(a)) return (NULL);
 
-typedef struct		s_list
+typedef struct		s_block
+{
+	char			*buf;
+	char			*str;
+	char			*tmp;
+	int				len;
+	int				fd;
+	struct s_block	*next;
+}					t_block;
+
+		typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
 
+int					get_next_line(const int fd, char **line);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_isalnum(int c);
