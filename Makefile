@@ -6,7 +6,7 @@
 #    By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/18 21:04:05 by jmeier            #+#    #+#              #
-#    Updated: 2017/10/29 19:49:48 by jmeier           ###   ########.fr        #
+#    Updated: 2017/11/03 19:57:24 by jmeier           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME):
 		gcc -c -Wall -Werror -Wextra $(SRC) $(HEADER)
 		ar rcs $(NAME) $(OBJ)
 
