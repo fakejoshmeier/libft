@@ -6,7 +6,7 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 11:34:56 by jmeier            #+#    #+#             */
-/*   Updated: 2017/11/08 19:57:11 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/11/21 08:40:51 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
-void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr_fd(int n, int fd, int base);
 void				ft_putstr(char *s);
 void				ft_putstr_fd(char const *s, int fd);
 char				*ft_strcat(char *dst, const char *src);
