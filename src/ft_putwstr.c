@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putulong_base_fd.c                              :+:      :+:    :+:   */
+/*   ft_putwstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/20 12:52:12 by jmeier            #+#    #+#             */
-/*   Updated: 2017/11/29 11:52:41 by jmeier           ###   ########.fr       */
+/*   Created: 2017/12/03 13:42:11 by jmeier            #+#    #+#             */
+/*   Updated: 2017/12/03 14:11:19 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putulong_base_fd(unsigned long n, unsigned long base, int fd)
+static int	ft_widelen(wchar_t *str)
 {
-	unsigned long	p;
-	char	*c;
+	int	i;
 
-	p = 1;
-	c = "0123456789ABCDEFHIJKLMNOPQRSTUVWXYZ";
-	while ((n / p) >= base)
-		p *= base;
-	base == 2 ? ft_putstr_fd("0b", fd) : 0;
-	base == 8 ? ft_putstr_fd("0o", fd) : 0;
-	base == 16 ? ft_putstr_fd("0x", fd) : 0;
-	while (p > 0)
+	i = -1;
+	while (str[++i])
+		;
+	return (i);
+}
+
+void		ft_putwstr(wchar_t *str)
+{
+	int	i;
+
+	if (str)
 	{
-		ft_putchar_fd(c[(n / p) % base], fd);
-		p /= base;
+		i = -1;
+		while (str[++i])
+			write(1, &str, 1);
 	}
+	else
+		write(1, "(null)", 6);
 }

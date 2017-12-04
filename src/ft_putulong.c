@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putullong_base_fd.c                             :+:      :+:    :+:   */
+/*   ft_putulong.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 12:52:12 by jmeier            #+#    #+#             */
-/*   Updated: 2017/11/29 12:04:38 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/12/03 14:18:28 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putullong_base_fd(unsigned long long n, unsigned long long b, int fd)
+void	ft_putulong(unsigned long n, unsigned long base, int fd)
 {
-	long	p;
-	char	*c;
+	unsigned long	p;
+	char			*c;
 
 	p = 1;
 	c = "0123456789ABCDEFHIJKLMNOPQRSTUVWXYZ";
-	while ((n / p) >= b)
-		p *= b;
-	b == 2 ? ft_putstr_fd("0b", fd) : 0;
-	b == 8 ? ft_putstr_fd("0o", fd) : 0;
-	b == 16 ? ft_putstr_fd("0x", fd) : 0;
+	while ((n / p) >= base)
+		p *= base;
+/*
+**	base == 2 ? ft_putstr_fd("0b", fd) : 0;
+**	base == 8 ? ft_putstr_fd("0o", fd) : 0;
+**	base == 16 ? ft_putstr_fd("0x", fd) : 0;
+*/
 	while (p > 0)
 	{
-		ft_putchar_fd(c[(n / p) % b], fd);
-		p /= b;
+		ft_putchar_fd(c[(n / p) % base], fd);
+		p /= base;
 	}
 }

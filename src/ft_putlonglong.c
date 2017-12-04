@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putllong_base_fd.c                              :+:      :+:    :+:   */
+/*   ft_putlonglong.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 12:52:12 by jmeier            #+#    #+#             */
-/*   Updated: 2017/11/29 11:50:35 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/12/02 20:39:16 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putllong_base_fd(long long n, long long base, int fd)
+void	ft_putlonglong(long long n, long long base, int fd)
 {
 	long long	p;
 	char		*c;
