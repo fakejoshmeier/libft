@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putwstr.c                                       :+:      :+:    :+:   */
+/*   ft_unumlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/03 13:42:11 by jmeier            #+#    #+#             */
-/*   Updated: 2017/12/08 15:03:47 by jmeier           ###   ########.fr       */
+/*   Created: 2017/12/06 16:19:51 by jmeier            #+#    #+#             */
+/*   Updated: 2017/12/08 22:01:05 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putwstr(wchar_t *str)
+int		ft_unumlen(unsigned int n, int base)
 {
-	int	i;
+	int		len;
+	long	nb;
 
-	if (str)
+	len = 0;
+	nb = (long)n;
+	while (nb != 0)
 	{
-		i = -1;
-		while (str[++i])
-			write(1, &str[i], 1);
+		len++;
+		nb /= base;
 	}
+	return (len);
 }

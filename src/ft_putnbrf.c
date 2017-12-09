@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putwstr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbrf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/03 13:42:11 by jmeier            #+#    #+#             */
-/*   Updated: 2017/12/08 15:03:47 by jmeier           ###   ########.fr       */
+/*   Created: 2017/09/20 12:52:12 by jmeier            #+#    #+#             */
+/*   Updated: 2017/12/08 20:11:03 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putwstr(wchar_t *str)
+void	ft_putnbrf(int n)
 {
-	int	i;
+	int		p;
+	char	*c;
 
-	if (str)
+	p = 1;
+	c = "0123456789ABCDEFHIJKLMNOPQRSTUVWXYZ";
+	while ((n / p) >= 10 || (n / p) <= -10)
+		p *= 10;
+	while (p > 0)
 	{
-		i = -1;
-		while (str[++i])
-			write(1, &str[i], 1);
+		ft_putchar_fd(c[(n / p) % 10], 1);
+		p /= 10;
 	}
 }
