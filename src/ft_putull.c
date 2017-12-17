@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbrf.c                                       :+:      :+:    :+:   */
+/*   ft_putull.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/20 12:52:12 by jmeier            #+#    #+#             */
-/*   Updated: 2017/12/11 23:59:30 by jmeier           ###   ########.fr       */
+/*   Created: 2017/12/10 20:44:37 by jmeier            #+#    #+#             */
+/*   Updated: 2017/12/10 20:46:08 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbrf(int n)
+void	ft_putull(unsigned long long n)
 {
-	if (n < 0)
-		n = -n;
-	if (n == -2147483648)
-	{
-		ft_putchar('2');
-		n = n % 1000000000;
-		n = -n;
-	}
 	if (n >= 10)
 	{
-		ft_putnbrf(n / 10);
-		ft_putnbrf(n % 10);
+		ft_putull(n / 10);
+		ft_putull(n % 10);
 	}
 	else
 		ft_putchar(n + '0');

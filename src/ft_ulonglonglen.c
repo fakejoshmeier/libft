@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbrf.c                                       :+:      :+:    :+:   */
+/*   ft_ulonglonglen.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/20 12:52:12 by jmeier            #+#    #+#             */
-/*   Updated: 2017/12/11 23:59:30 by jmeier           ###   ########.fr       */
+/*   Created: 2017/12/06 16:19:51 by jmeier            #+#    #+#             */
+/*   Updated: 2017/12/10 19:10:54 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbrf(int n)
+int		ft_ulonglonglen(unsigned long long n, int base)
 {
-	if (n < 0)
-		n = -n;
-	if (n == -2147483648)
+	int					len;
+	unsigned long long	nb;
+
+	len = 0;
+	nb = n;
+	while (nb != 0)
 	{
-		ft_putchar('2');
-		n = n % 1000000000;
-		n = -n;
+		len++;
+		nb /= base;
 	}
-	if (n >= 10)
-	{
-		ft_putnbrf(n / 10);
-		ft_putnbrf(n % 10);
-	}
-	else
-		ft_putchar(n + '0');
+	return (len);
 }

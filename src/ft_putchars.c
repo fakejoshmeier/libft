@@ -6,7 +6,7 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 14:09:59 by jmeier            #+#    #+#             */
-/*   Updated: 2017/12/08 14:30:57 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/12/11 23:22:06 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 void	ft_putchars(char c, int amt)
 {
-	char	*buf;
 	int		i;
 
-	buf = (char *)malloc(sizeof(char *) * amt);
 	i = -1;
-	while (buf[++i])
-		buf[i] = c;
-	ft_putstr(buf);
-	ft_free(buf);
+	while (++i < amt)
+		write(1, &c, 1);
 }

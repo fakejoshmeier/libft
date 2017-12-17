@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbrf.c                                       :+:      :+:    :+:   */
+/*   ft_putlhex.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/20 12:52:12 by jmeier            #+#    #+#             */
-/*   Updated: 2017/12/11 23:59:30 by jmeier           ###   ########.fr       */
+/*   Created: 2017/12/12 00:34:03 by jmeier            #+#    #+#             */
+/*   Updated: 2017/12/12 09:39:09 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbrf(int n)
+void	ft_putlhex(unsigned long long n)
 {
-	if (n < 0)
-		n = -n;
-	if (n == -2147483648)
+	if (n > 15)
 	{
-		ft_putchar('2');
-		n = n % 1000000000;
-		n = -n;
+		ft_putlhex(n / 16);
+		ft_putlhex(n % 16);
 	}
-	if (n >= 10)
-	{
-		ft_putnbrf(n / 10);
-		ft_putnbrf(n % 10);
-	}
-	else
+	else if (n < 10)
 		ft_putchar(n + '0');
+	else
+	{
+		n == 10 ? ft_putchar('a') : 0;
+		n == 11 ? ft_putchar('b') : 0;
+		n == 12 ? ft_putchar('c') : 0;
+		n == 13 ? ft_putchar('d') : 0;
+		n == 14 ? ft_putchar('e') : 0;
+		n == 15 ? ft_putchar('f') : 0;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: jmeier <jmeier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 12:01:46 by jmeier            #+#    #+#             */
-/*   Updated: 2017/12/08 20:12:06 by jmeier           ###   ########.fr       */
+/*   Updated: 2017/12/12 19:13:54 by jmeier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,19 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+void				ft_ld(long n);
+void				ft_puthex(unsigned long long n);
+void				ft_putlhex(unsigned long long n);
+void				ft_putoct(unsigned long long n);
+void				ft_putull(unsigned long long n);
 void				ft_putnbrf(int n);
 int					ft_numlen(int n, int base);
+int					ft_unumlen(unsigned int n, int base);
+int					ft_longlen(long n, int base);
+int					ft_ulonglen(unsigned long n, int base);
+int					ft_longlonglen(long long n, int base);
+int					ft_ulonglonglen(unsigned long long n, int base);
+void				ft_putstrn(char *s, int n);
 void				ft_putwstr(wchar_t *str);
 void				*ft_realloc(void *ptr, size_t size, size_t new_size);
 void				ft_free(void *ptr);
@@ -50,7 +61,7 @@ int					ft_isdigit(int c);
 int					ft_isprint(int c);
 int					ft_isspace(char c);
 int					ft_isascii(int c);
-int					ft_isvalue(int c);
+int					ft_isvalue(char c);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int n, int base);
 void				ft_lstadd(t_list **alst, t_list *new);
@@ -105,7 +116,7 @@ void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
-size_t				ft_strlen(const char *s);
+int					ft_strlen(const char *s);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strncat(char *s1, const char *s2, size_t n);
